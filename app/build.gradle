@@ -46,4 +46,9 @@ dependencies {
     // navigation component - Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+
+    //modules
+    implementation project(':first_feature')
+    implementation project(':second_feature')
+    implementation project(':third_feature')
 }

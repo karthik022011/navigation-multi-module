@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/nav_first_fragment">
+    <fragment
+        android:id="@+id/nav_first_fragment"
+        android:name="com.kartheek.navigationmultimodule.FragmentA"
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/nav_second_fragment" />
+
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentA_activity2"
+            app:destination="@id/nav_activity2" />
+
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB_activity2"
+            app:destination="@id/nav_activity2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_second_fragment"
+        android:name="com.kartheek.navigationmultimodule.FragmentB"
+        tools:layout="@layout/fragment_b">
+
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentC"
+            app:destination="@id/nav_third_fragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_third_fragment"
+        android:name="com.kartheek.navigationmultimodule.FragmentC"
+        tools:layout="@layout/fragment_c">
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentD"
+            app:destination="@id/nav_fourth_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fourth_fragment"
+        android:name="com.kartheek.navigationmultimodule.FragmentD"
+        tools:layout="@layout/fragment_d">
+        <action
+            android:id="@+id/action_fragmentD_to_fragmentB"
+            app:popUpTo="@id/nav_second_fragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+
+    <activity
+        android:id="@+id/nav_activity2"
+        android:name="com.kartheek.navigationmultimodule.MainActivity2"
+        tools:layout="@layout/activity_main2">
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </activity>
+
+</navigation>

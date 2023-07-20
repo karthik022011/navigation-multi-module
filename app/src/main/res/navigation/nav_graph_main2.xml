@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main2"
+    app:startDestination="@id/nav_fragmenta_activity2">
+    <fragment
+        android:id="@+id/nav_fragmenta_activity2"
+        android:name="com.kartheek.navigationmultimodule.FragmentAActivity2"
+        tools:layout="@layout/fragmenta_activity2">
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fragmentb_activity2"
+        android:name="com.kartheek.navigationmultimodule.FragmentBActivity2"
+        tools:layout="@layout/fragmentb_activity2">
+        <argument
+            android:name="name"
+            android:defaultValue="empty"
+            app:argType="string" />
+    </fragment>
+</navigation>
+
